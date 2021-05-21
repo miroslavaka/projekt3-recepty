@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,8 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <div class="kontejner">
 
         <header class="hlavicka">
@@ -21,40 +22,33 @@
                 <img src="images/recepty-logo.svg" alt="Recepty logo">
             </div>
             <div class="hledani">
-                <!--
                 <label for="hledat">Hledat</label>
                 <div class="hledani-skupina">
                     <input type="text" id="hledat" placeholder="Název receptu">
                     <button>Hledat</button>
                 </div>
-                -->
             </div>
             <div class="kategorie">
-                <!--
                 <label for="kategorie">Kategorie</label>
-                <select id="kategorie">
+                <select id="kategorie" onchange="filtrujKategorie()">
                     <option value=""></option>
                     <option>Snídaně</option>
                     <option>Hlavní jídlo</option>
                     <option>Dezert</option>
                 </select>
-                -->
             </div>
             <div class="razeni">
-                <!--
                 <label for="razeni">Seřadit</label>
                 <select id="razeni">
                     <option value=""></option>
                     <option value="1">Od nejlepších</option>
                     <option value="2">Od nejhorších</option>
                 </select>
-                -->
             </div>
         </header>
 
-
         <div id="recepty" class="recepty">
-            <!--
+            <!-- 
             <div class="recept">
                 <div class="recept-obrazek">
                     <img src="https://ms2.ostium.cz/instance/web-recepty/j1cFHt79/h389w574t.jpg" alt="Obrazek">
@@ -69,7 +63,7 @@
 
         <div class="recept-detail">
             <div class="recept-detail-obrazek">
-                    <img id="recept-foto" src="sem-doplnit-adresu-obrazku.jpg" alt="">
+                <img id="recept-foto" src="sem-doplnit-adresu-obrazku.jpg" alt="">
             </div>
 
             <div class="recept-detail-info">
@@ -84,9 +78,13 @@
                     </div>
                 </header>
 
-                <h1 id="recept-nazev"><!-- sem se bude doplňovat --></h1>
+                <h1 id="recept-nazev">
+                    <!-- sem se bude doplňovat -->
+                </h1>
 
-                <p id="recept-popis"><!-- sem se bude doplňovat --></p>
+                <p id="recept-popis">
+                    <!-- sem se bude doplňovat -->
+                </p>
             </div>
         </div>
 
@@ -94,6 +92,6 @@
 
     <script src="recepty.js"></script>
     <script src="app.js"></script>
-
 </body>
+
 </html>
