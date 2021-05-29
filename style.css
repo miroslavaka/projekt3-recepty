@@ -1,5 +1,5 @@
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
@@ -8,11 +8,11 @@ html {
     box-sizing: inherit;
 }
 
+
 /* * {
     margin: 0;
     padding: 0;
 } */
-
 
 body {
     min-height: 100vh;
@@ -25,7 +25,6 @@ body {
     background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
     */
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-
 }
 
 h1 {
@@ -113,7 +112,6 @@ h1 {
     cursor: pointer;
 }
 
-
 .hlavicka select {
     border: 1px solid #feada6;
     background-color: white;
@@ -123,14 +121,15 @@ h1 {
     outline: 0;
 }
 
-
-
 .recepty {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding: 10px;
     background-color: #efefef;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    /*overflow-y: auto;*/
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .recept {
@@ -189,9 +188,6 @@ h1 {
     transition: all 0.2s;
 }
 
-
-
-
 .recept-detail {
     background: white;
 }
@@ -200,6 +196,7 @@ h1 {
     height: 300px;
     position: relative;
 }
+
 
 /*
 .recept-detail-obrazek::after {
@@ -221,10 +218,10 @@ h1 {
 }
 
 .recept-detail-info {
-   padding: 20px;
+    padding: 20px;
 }
 
-.recept-detail-info > header {
+.recept-detail-info>header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -247,3 +244,12 @@ h1 {
 .recept-detail h1 {
     color: #feada6;
 }
+
+
+/*@media (max-width:1080px) {
+    .kontejner {
+        margin: auto;
+        min-width: 90vh;
+        max-width: 100vh;
+    }
+}*/

@@ -18,7 +18,7 @@ recept-hodnoceni, recept-nazev, recept-popis.
 6) Poslední vybraný recept ulož do Local Storage, aby se při novém otevření aplikace načetl.
 */
 
-//seznam receptu
+//zoznam receptu
 let zoznamReceptu = document.querySelector('#recepty');
 
 function vytvorZoznamReceptov(recepty) {
@@ -52,29 +52,33 @@ function vytvorZoznamReceptov(recepty) {
 }
 vytvorZoznamReceptov(recepty);
 
+//kliknout na recepty a na pravé polovině se objeví detail receptu
+let image = document.querySelector('#recept-foto');
+
 function zobrazObrazok(obrazek, index) {
     obrazek.addEventListener('click', function() {
-        let image = document.querySelector('#recept-foto');
         image.src = recepty[index].img;
     });
 }
 
+let receptNazev = document.querySelector('#recept-nazev');
+let receptPopis = document.querySelector('#recept-popis');
+
 function zobrazText(text, index) {
     text.addEventListener('click', function() {
-        let receptNazev = document.querySelector('#recept-nazev');
         receptNazev.innerHTML = recepty[index].nadpis;
-
-        let receptPopis = document.querySelector('#recept-popis');
         receptPopis.innerHTML = recepty[index].popis;
+
+        uloz(recepty[index].id);
     });
 }
 
+let receptHodnoceni = document.querySelector('#recept-hodnoceni');
+let receptKategorie = document.querySelector('#recept-kategorie');
+
 function zobrazHodnoceniKategorie(recept, index) {
     recept.addEventListener('click', function() {
-        let receptHodnoceni = document.querySelector('#recept-hodnoceni');
         receptHodnoceni.innerText = recepty[index].hodnoceni;
-
-        let receptKategorie = document.querySelector('#recept-kategorie');
         receptKategorie.innerText = recepty[index].kategorie;
     });
 }
@@ -105,7 +109,7 @@ function vyfiltruj() {
     });
 };
 
-//3) Doplň filtrovanání receptů podle kategorie
+// filtrovanání receptů podle kategorie
 let kategorie = document.querySelector('#kategorie');
 
 window.addEventListener("load", filtrujKategorie);
@@ -113,17 +117,73 @@ window.addEventListener("load", filtrujKategorie);
 function filtrujKategorie() {
     kategorie.addEventListener("change", function() {
         let text = kategorie.value;
-        let receptyToDisplay = [];
+        let receptyZobrazenie = [];
         if (text == "") {
-            receptyToDisplay = recepty;
+            receptyZobrazenie = recepty;
         } else {
             for (let i = 0; i < recepty.length; i++) {
                 if (recepty[i].kategorie == text) {
-                    receptyToDisplay.push(recepty[i]);
+                    receptyZobrazenie.push(recepty[i]);
+                    console.log(receptyZobrazenie);
                 }
             };
         };
         zoznamReceptu.innerHTML = "";
-        vytvorZoznamReceptov(receptyToDisplay);
+        vytvorZoznamReceptov(receptyZobrazenie);
     });
 };
+
+//řazení receptů podle hodnocení
+//https://www.javascripttutorial.net/javascript-array-sort/
+let razeni = document.querySelector('#razeni');
+
+window.addEventListener("load", razeniReceptu);
+
+function razeniReceptu() {
+    razeni.addEventListener('change', function() {
+        let values = razeni.value;
+
+        //JSON.parse and JSON.stringify (Deep copy)
+        //https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
+        let receptyCopy = JSON.parse(JSON.stringify(recepty));
+
+        if (values == 2) {
+            receptyCopy.sort(function(r1, r2) {
+                return r1.hodnoceni - r2.hodnoceni;
+            });
+        } else
+        if (values == 1) {
+            receptyCopy.sort(function(r1, r2) {
+                return r2.hodnoceni - r1.hodnoceni;
+            });
+        } else {
+            receptyCopy = recepty;
+        }
+        zoznamReceptu.innerHTML = "";
+        vytvorZoznamReceptov(receptyCopy);
+    });
+}
+
+//local storage
+window.addEventListener("load", nacitaj);
+
+// uloženie do local storage
+function uloz(id) {
+    localStorage.setItem('recepty', id);
+}
+//  načitanie z local storage
+function nacitaj() {
+    let hodnota = localStorage.getItem('recepty');
+    //alert(hodnota);
+    let index = 0;
+    for (let i = 0; i < recepty.length; i++) {
+        if (recepty[i].id == hodnota) {
+            index = i;
+        }
+    }
+    image.src = recepty[index].img;
+    receptNazev.innerHTML = recepty[index].nadpis;
+    receptPopis.innerHTML = recepty[index].popis;
+    receptHodnoceni.innerText = recepty[index].hodnoceni;
+    receptKategorie.innerText = recepty[index].kategorie;
+}

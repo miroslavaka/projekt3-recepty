@@ -4,7 +4,8 @@ const recepty = [{
         hodnoceni: 4.4,
         kategorie: 'Dezert',
         stitek: 'dezert',
-        img: 'https://images.pexels.com/photos/315707/pexels-photo-315707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://images.pexels.com/photos/315707/pexels-photo-315707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        id: 1
     },
     {
         nadpis: 'Těstoviny s pestem',
@@ -12,7 +13,8 @@ const recepty = [{
         hodnoceni: 4.2,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9443baefd581d4e532b6d4f1e7879be&auto=format&fit=crop&w=1350&q=80'
+        img: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9443baefd581d4e532b6d4f1e7879be&auto=format&fit=crop&w=1350&q=80',
+        id: 2
     },
     {
         nadpis: 'Palačinka s medem a oříšky',
@@ -20,7 +22,8 @@ const recepty = [{
         hodnoceni: 3.6,
         kategorie: 'Dezert',
         stitek: 'dezert',
-        img: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=54182d2977056d28bd299799b8428fa6&auto=format&fit=crop&w=634&q=80'
+        img: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=54182d2977056d28bd299799b8428fa6&auto=format&fit=crop&w=634&q=80',
+        id: 3
     },
     {
         nadpis: 'Chléb s avokádem a vajíčkem',
@@ -28,7 +31,8 @@ const recepty = [{
         hodnoceni: 4.2,
         kategorie: 'Snídaně',
         stitek: 'snidane',
-        img: 'https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        id: 4
     },
     {
         nadpis: 'Čokoládové brownie',
@@ -36,7 +40,8 @@ const recepty = [{
         hodnoceni: 4.9,
         kategorie: 'Dezert',
         stitek: 'dezert',
-        img: 'https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        id: 5
     },
     {
         nadpis: 'Vajíčková omeleta se špenátem',
@@ -44,7 +49,8 @@ const recepty = [{
         hodnoceni: 4.2,
         kategorie: 'Snídaně',
         stitek: 'snidane',
-        img: 'https://images.unsplash.com/photo-1494597706938-de2cd7341979?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6dc5376ce585ce0df0d44232b9bab53c&auto=format&fit=crop&w=1379&q=80'
+        img: 'https://images.unsplash.com/photo-1494597706938-de2cd7341979?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6dc5376ce585ce0df0d44232b9bab53c&auto=format&fit=crop&w=1379&q=80',
+        id: 6
     },
     {
         nadpis: 'Kuřecí salát',
@@ -52,7 +58,8 @@ const recepty = [{
         hodnoceni: 4.7,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940'
+        img: 'https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940',
+        id: 7
     },
     {
         nadpis: 'Sýrová pizza',
@@ -60,7 +67,8 @@ const recepty = [{
         hodnoceni: 4.7,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-0.3.5&s=8695cc99c49c956556f7411faf6df8b0&auto=format&fit=crop&w=1350&q=80'
+        img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-0.3.5&s=8695cc99c49c956556f7411faf6df8b0&auto=format&fit=crop&w=1350&q=80',
+        id: 8
     },
     {
         nadpis: 'Kuřecí roláda',
@@ -68,7 +76,8 @@ const recepty = [{
         hodnoceni: 4.6,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1517609948086-6a03114ae1af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=24e11e05a26a3b992c8469426a628a90&auto=format&fit=crop&w=675&q=80'
+        img: 'https://images.unsplash.com/photo-1517609948086-6a03114ae1af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=24e11e05a26a3b992c8469426a628a90&auto=format&fit=crop&w=675&q=80',
+        id: 9
     },
     {
         nadpis: 'Borůvkovo-tvarohový dezert',
@@ -76,7 +85,8 @@ const recepty = [{
         hodnoceni: 3.8,
         kategorie: 'Dezert',
         stitek: 'dezert',
-        img: 'https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&s=a48ebf1c62105a202c421db95caa3b48&auto=format&fit=crop&w=634&q=80'
+        img: 'https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&s=a48ebf1c62105a202c421db95caa3b48&auto=format&fit=crop&w=634&q=80',
+        id: 10
     },
     {
         nadpis: 'Hovězí steak',
@@ -84,7 +94,8 @@ const recepty = [{
         hodnoceni: 4.7,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        id: 11
     },
     {
         nadpis: 'Tiramisu',
@@ -92,7 +103,8 @@ const recepty = [{
         hodnoceni: 3.8,
         kategorie: 'Dezert',
         stitek: 'dezert',
-        img: 'https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffa9224ea62436ebb99ebf25c50be60&auto=format&fit=crop&w=1320&q=80'
+        img: 'https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffa9224ea62436ebb99ebf25c50be60&auto=format&fit=crop&w=1320&q=80',
+        id: 12
     },
     {
         nadpis: 'Ceasar salát',
@@ -100,7 +112,8 @@ const recepty = [{
         hodnoceni: 3.9,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a5832df503143f0eb527593cd0c5abe6&auto=format&fit=crop&w=1350&q=80'
+        img: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a5832df503143f0eb527593cd0c5abe6&auto=format&fit=crop&w=1350&q=80',
+        id: 13
     },
     {
         nadpis: 'Sladký toast s ovocem',
@@ -108,7 +121,8 @@ const recepty = [{
         hodnoceni: 4.2,
         kategorie: 'Snídaně',
         stitek: 'snidane',
-        img: 'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-0.3.5&s=b2f8991c8bfaac59a8d115930d9c12cd&auto=format&fit=crop&w=1350&q=80'
+        img: 'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-0.3.5&s=b2f8991c8bfaac59a8d115930d9c12cd&auto=format&fit=crop&w=1350&q=80',
+        id: 14
     },
     {
         nadpis: 'Vegetariánská pizza',
@@ -116,7 +130,8 @@ const recepty = [{
         hodnoceni: 4.7,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1516183483970-cedfa98169fa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=28a8ffb099b40dc89c12cec6a7f0a68a&auto=format&fit=crop&w=1350&q=80'
+        img: 'https://images.unsplash.com/photo-1516183483970-cedfa98169fa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=28a8ffb099b40dc89c12cec6a7f0a68a&auto=format&fit=crop&w=1350&q=80',
+        id: 15
     },
     {
         nadpis: 'Křupavé kuře',
@@ -124,6 +139,7 @@ const recepty = [{
         hodnoceni: 4.3,
         kategorie: 'Hlavní jídlo',
         stitek: 'hlavniJidlo',
-        img: 'https://images.unsplash.com/photo-1516684669134-de6f7c473a2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=353c1f4206a931db97274e65329b85d8&auto=format&fit=crop&w=634&q=80'
+        img: 'https://images.unsplash.com/photo-1516684669134-de6f7c473a2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=353c1f4206a931db97274e65329b85d8&auto=format&fit=crop&w=634&q=80',
+        id: 16
     },
 ]
