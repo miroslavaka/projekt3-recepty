@@ -105,7 +105,6 @@ function vyfiltruj() {
                 recept[i].style.display = "none";
             };
         };
-
     });
 };
 
